@@ -7,7 +7,7 @@
     </style>
 
     <!-- Hero Start -->
-    <div id="load-home" class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div id="load-home" class="container-fluid bg-primary py-5 mb-5" style="background: url(assets/img/{{$img_hero}}) top right no-repeat; background-size: cover;height: 650px;">
         <div class="container py-5">
             <div class="row justify-content-start">
                 <div class="col-lg-8 text-center text-lg-start">
@@ -16,10 +16,10 @@
             border-color: rgba(256, 256, 256, 0.3) !important;
             color: #495470;
           ">
-                        Selamat Datang Di Klinik Happy Kids
+                        {{ $teks1 }}
                     </h5>
                     <h1 class="display-3 text-secondary mb-md-4">
-                        Klinik anak terbaik di kota anda
+                        {{ $teks2 }}
                     </h1>
                     <div class="pt-2">
                         <a href="#load-appointment"
@@ -39,7 +39,7 @@
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="{{ asset('assets') }}/img/about.png"
+                        <img class="position-absolute w-100 h-100 rounded" src="{{ asset('assets') }}/img/{{$img_tentang}}"
                             style="object-fit: cover" />
                     </div>
                 </div>
@@ -49,48 +49,62 @@
                             Tentang Kami
                         </h5>
                         <h1 class="display-6">
-                            Anak adalah Buah Hati Kita yang Paling Berharga.
+                            {{ $teks_tentang1 }}
                         </h1>
                     </div>
                     <p>
-                        Klinik Tumbuh Kembang Happy Kids dibangun untuk meningkatkan partisipasi orang tua, pengasuh,
-                        petugas TPA, Paud, Playgroup dan TK dalam mendeteksi dini tumbuh kembang bayi, anak balita dan anak
-                        pra sekolah. Serta untuk mengoptimalkan tumbuh kembang bayi, anak balita dan anak pra sekolah
+                        {{ $teks_tentang2 }}
                     </p>
-                    <div class="row g-3 pt-3">
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
-                                <h6 class="mb-0">
-                                    Qualified<small class="d-block text-primary">Doctors</small>
-                                </h6>
-                            </div>
+                    <div class="row g-3 pt-1">
+                        <div class="col-sm-6 col-12">
+              
+                          <iframe
+                            class="position-relative w-100 h-100"
+                            src="{{ $maps }}"
+                            frameborder="0"
+                            style="border: 0"
+                            allowfullscreen=""
+                            aria-hidden="false"
+                            tabindex="0"
+                          ></iframe>
+                          
                         </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
-                                <h6 class="mb-0">
-                                    Emergency<small class="d-block text-primary">Services</small>
-                                </h6>
-                            </div>
+                        <div class="col-sm-6 col-12">
+                            <h5 class="d-inline-block text-secondary text-uppercase border-bottom border-5">
+                                Hubungi Kami
+                            </h5>
+                              <table class="table tbl-hub" style="color:#1D2A4D">
+                                <center>
+                                  <tr>
+                                    <th>
+                                      <i class="fa fa-clock"></i>
+                                    </th>
+                                    <th>{{ $waktu }}</th>
+                                  </tr>
+                                  <tr>
+                                    <th>
+                                      <i class="fa fa-hospital"></i>
+                                    </th>
+                                    <th>{{ $alamat }}</th>
+                                  </tr>
+                                  <tr>
+                                    <th>
+                                      <i class="fa fa-phone"></i>
+                                    </th>
+                                    <th>{{ $nohp }}</th>
+                                  </tr>
+                                  <tr>
+                                    <th>
+                                      <i class="fa fa-envelope"></i>
+                                    </th>
+                                    <th>{{ $email }}</th>
+                                  </tr>
+                                  
+                                </center>
+                              </table>
                         </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
-                                <h6 class="mb-0">
-                                    Accurate<small class="d-block text-primary">Testing</small>
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
-                                <h6 class="mb-0">
-                                    Free<small class="d-block text-primary">Ambulance</small>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
+                        
+                      </div>
                 </div>
             </div>
         </div>
@@ -126,179 +140,9 @@
     </div>
     <!-- Appointment End -->
 
-    <!-- Team Start -->
-    {{-- <div id="load-doctors" class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px">
-                <h5 class="d-inline-block text-secondary text-uppercase border-bottom border-5">
-                    Dokter Kami
-                </h5>
-                <h1 class="display-6">
-                    Profesional Perawatan Kesehatan yang Berkualitas</h1>
-            </div>
-            <div class="owl-carousel team-carousel position-relative">
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="{{ asset('assets') }}/img/team-1.jpg"
-                                style="object-fit: cover" />
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Doctor Name</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">
-                                    Cardiology Specialist
-                                </h6>
-                                <p class="m-0">
-                                    Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum
-                                    clita rebum dolor
-                                </p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="{{ asset('assets') }}/img/team-2.jpg"
-                                style="object-fit: cover" />
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Doctor Name</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">
-                                    Cardiology Specialist
-                                </h6>
-                                <p class="m-0">
-                                    Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum
-                                    clita rebum dolor
-                                </p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-item">
-                    <div class="row g-0 bg-light rounded overflow-hidden">
-                        <div class="col-12 col-sm-5 h-100">
-                            <img class="img-fluid h-100" src="{{ asset('assets') }}/img/team-3.jpg"
-                                style="object-fit: cover" />
-                        </div>
-                        <div class="col-12 col-sm-7 h-100 d-flex flex-column">
-                            <div class="mt-auto p-4">
-                                <h3>Doctor Name</h3>
-                                <h6 class="fw-normal fst-italic text-primary mb-4">
-                                    Cardiology Specialist
-                                </h6>
-                                <p class="m-0">
-                                    Dolor lorem eos dolor duo eirmod sea. Dolor sit magna rebum
-                                    clita rebum dolor
-                                </p>
-                            </div>
-                            <div class="d-flex mt-auto border-top p-4">
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-twitter"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-lg btn-primary btn-lg-square rounded-circle" href="#"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-    <!-- Contact Start -->
-    <div id="load-contact" class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px">
-                <h5 class="d-inline-block text-secondary text-uppercase border-bottom border-5">
-                    ADA PERTANYAAN?
-                </h5>
-                <h1 class="display-4">Jangan Ragu Untuk Menghubungi Kami</h1>
-            </div>
-
-            <div class="row">
-                <div class="col-12" style="height: 500px">
-                    <div class="position-relative h-100">
-                        <iframe class="position-relative w-100 h-100"
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15932.309587454649!2d114.5895158!3d-3.331056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40e6ae06c804e077!2sKlinik%20HAPPY%20KIDS%22!5e0!3m2!1sen!2sid!4v1617347091788!5m2!1sen!2sid"
-                            frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
-                            tabindex="0"></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1">
-                <div class="col-lg-7">
-                    <div class="bg-primary rounded p-5 m-5 mb-0">
-                        <form>
-                            <div class="row g-3">
-                                <h5 class="display-5">Hubungi Kami</h5>
-                                <table class="table tbl-hub" style="border:0.5px solid #ECED99;">
-                                    <center>
-                                        <tr>
-                                            <th>
-                                                <i class="fa fa-clock"></i>
-                                            </th>
-                                            <th>9AM-6PM Everyday</th>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <i class="fa fa-hospital"></i>
-                                            </th>
-                                            <th>Jl K.S Tubun no. 165 – Banjarmasin</th>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <i class="fa fa-phone"></i>
-                                            </th>
-                                            <th>0511 3271463 | 0811 5066777</th>
-                                        </tr>
-                                        <tr>
-                                            <th>
-                                                <i class="fa fa-envelope"></i>
-                                            </th>
-                                            <th>klinikhappy@gmail.com</th>
-                                        </tr>
-                                        <tr>
-
-                                            <th>
-                                                <i class="fa fa-calendar-check text-secondary"></i>
-                                            </th>
-                                            <th><a href="#load-appointment" class="text-secondary">Buat Janji</a></th>
-
-                                        </tr>
-
-                                    </center>
-                                </table>
-
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
-    <!-- Contact End -->
-    @endsection @section('scripts')
+    
+    @endsection 
+    @section('scripts')
     <script>
         $(document).ready(function() {
             const pageAccessedByReload = (

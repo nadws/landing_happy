@@ -1,6 +1,6 @@
 @include('theme.head')
 
-<body>
+<body style="background-color: #{{$warna_bg}}">
     @include('theme.navbar')
 
 

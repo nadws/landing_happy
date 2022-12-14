@@ -22,7 +22,22 @@ class AppointmentController extends Controller
         $data = [
             'title' => 'app',
             'no_order' => $r->no_order,
-            'hal' => $hal
+            'hal' => $hal,
+            'h1' => DB::table('h1')->where('id_h1', 1)->first()->isi,
+            'img' => DB::table('h1')->where('id_h1', 2)->first()->isi,
+            'teks1' => DB::table('h1')->where('id_h1', 3)->first()->isi,
+            'teks2' => DB::table('h1')->where('id_h1', 4)->first()->isi,
+            'img_hero' => DB::table('h1')->where('id_h1', 7)->first()->isi,
+            'teks_tentang1' => DB::table('h1')->where('id_h1', 8)->first()->isi,
+            'teks_tentang2' => DB::table('h1')->where('id_h1', 9)->first()->isi,
+            'img_tentang' => DB::table('h1')->where('id_h1', 10)->first()->isi,
+            'waktu' => DB::table('h1')->where('id_h1', 11)->first()->isi,
+            'alamat' => DB::table('h1')->where('id_h1', 12)->first()->isi,
+            'nohp' => DB::table('h1')->where('id_h1', 13)->first()->isi,
+            'email' => DB::table('h1')->where('id_h1', 14)->first()->isi,
+            'maps' => DB::table('h1')->where('id_h1', 15)->first()->isi,
+            'warna' => DB::table('h1')->where('id_h1', 16)->first()->isi,
+            'warna_bg' => DB::table('h1')->where('id_h1', 17)->first()->isi,
 
         ];
         return view("home.content", $data);
@@ -279,8 +294,19 @@ class AppointmentController extends Controller
     {
         $data = [
             'title' => 'app',
-            'no_order' => $r->no_order
-
+            'no_order' => $r->no_order,
+            
+            // teks tamu selesai
+            'teks_janji1' => DB::table('h1')->where('id_h1', 19)->first()->isi,
+            'teks_janji2' => DB::table('h1')->where('id_h1', 20)->first()->isi,
+            'nominal_app' => DB::table('h1')->where('id_h1', 21)->first()->isi,
+            'nominal_tf' => DB::table('h1')->where('id_h1', 22)->first()->isi,
+            'mandiri_admin' => DB::table('h1')->where('id_h1', 23)->first()->isi,
+            'mandiri_norek' => DB::table('h1')->where('id_h1', 24)->first()->isi,
+            'bca_admin' => DB::table('h1')->where('id_h1', 25)->first()->isi,
+            'bca_norek' => DB::table('h1')->where('id_h1', 26)->first()->isi,
+            'wa_admin' => DB::table('h1')->where('id_h1', 27)->first()->isi,
+            'wa_nohp' => DB::table('h1')->where('id_h1', 28)->first()->isi,
         ];
         return view("appointment.selesai", $data);
     }
