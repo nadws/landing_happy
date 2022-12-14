@@ -2,6 +2,7 @@
     <style>
         .d-none {
             display: none;
+            display: block;
         }
     </style>
 
