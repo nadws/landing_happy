@@ -272,11 +272,7 @@ class AppointmentController extends Controller
 
         $invoice = DB::selectOne("SELECT max(a.urutan) as urutan FROM invoice as a");
 
-        if (empty($invoice->urutan)) {
-            $no_invoice = 1001;
-        } else {
-            $no_invoice = 1001 + 1;
-        }
+        $no_invoice = empty($invoice->urutan) ? 1001 : $invoice->urutan+ 1;        
 
         $data = [
             'no_order' => 'HK-' . $no_invoice,
