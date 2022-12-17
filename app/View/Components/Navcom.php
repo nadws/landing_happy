@@ -40,6 +40,9 @@ class Navcom extends Component
             'maps' => DB::table('h1')->where('id_h1', 15)->first()->isi,
             'warna' => DB::table('h1')->where('id_h1', 16)->first()->isi,
             'warna_bg' => DB::table('h1')->where('id_h1', 17)->first()->isi,
+            'fontc1' => DB::table('h1')->where('id_h1', 30)->first()->isi,
+            'fontc2' => DB::table('h1')->where('id_h1', 31)->first()->isi,
+            'fontc3' => DB::table('h1')->where('id_h1', 32)->first()->isi,
         ];
         return view('components.navcom', $data);
     }

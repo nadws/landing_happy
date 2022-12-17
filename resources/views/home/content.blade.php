@@ -19,18 +19,18 @@
           class="d-inline-block text-uppercase border-bottom border-5"
           style="
             border-color: rgba(256, 256, 256, 0.3) !important;
-            color: #495470;
+            color: {{$fontc2}};
           "
         >
           {{ $teks1 }}
         </h5>
-        <h1 class="display-3 text-secondary mb-md-4">{{ $teks2 }}</h1>
+        <h1 class="display-3 text-secondary mb-md-4" style="color: {{$fontc1}};">{{ $teks2 }}</h1>
         <div class="pt-2">
           <h5
             class="d-inline-block text-uppercase border-bottom border-5"
             style="
               border-color: rgba(256, 256, 256, 0.3) !important;
-              color: #495470;
+              color: {{$fontc2}};
               font-size: 15px;
             "
           >
@@ -57,7 +57,7 @@
         <div class="position-relative h-100">
           <img
             class="position-absolute w-100 h-100 rounded"
-            src="{{ asset('assets') }}/img/{{ $img_tentang }}"
+            src="{{ $url_asset . $img_tentang }}"
             style="object-fit: cover"
           />
         </div>
@@ -65,13 +65,14 @@
       <div class="col-lg-7">
         <div class="mb-4">
           <h5
-            class="d-inline-block text-secondary text-uppercase border-bottom border-5"
+            class="d-inline-block text-uppercase border-bottom border-5"
+            style="color: {{$fontc2}};"
           >
             Tentang Kami
           </h5>
-          <h1 class="display-6">{{ $teks_tentang1 }}</h1>
+          <h1 class="display-6" style="color: {{$fontc1}};">{{ $teks_tentang1 }}</h1>
         </div>
-        <p>{{ $teks_tentang2 }}</p>
+        <p class="color: {{$fontc3}};">{{ $teks_tentang2 }}</p>
         <div class="row g-3 pt-1">
           <div class="col-sm-6 col-12">
             <iframe
@@ -86,11 +87,12 @@
           </div>
           <div class="col-sm-6 col-12">
             <h5
-              class="d-inline-block text-secondary text-uppercase border-bottom border-5"
+              class="d-inline-block text-uppercase border-bottom border-5"
+              style="color: {{$fontc2}};"
             >
               Hubungi Kami
             </h5>
-            <table class="table tbl-hub" style="color: #1d2a4d">
+            <table class="table tbl-hub" style="color: {{$fontc2}};">
               <center>
                 <tr>
                   <th>
@@ -127,20 +129,20 @@
 <!-- About End -->
 
 <!-- Appointment Start -->
-<div id="load-appointment" class="container-fluid bg-primary my-5 py-5">
+<div id="load-appointment" class="container-fluid my-5 py-5" style="background-color: {{$warna}}">
   <div class="container py-5">
     <div class="row gx-5">
       <div class="col-lg-4 mb-5 mb-lg-0">
         <img
           style="object-fit: cover"
           class="w-100 h-50 rounded"
-          src="{{ asset('assets') }}/img/{{ $img }}"
+          src="{{ $url_asset . $img }}"
           alt=""
         />
         <img
           style="object-fit: cover"
           class="w-100 h-50 rounded mt-3"
-          src="{{ asset('assets') }}/img/{{ $img_tentang }}"
+          src="{{ $url_asset . $img_tamu }}"
           alt=""
         />
       </div>

@@ -38,6 +38,12 @@ class AppointmentController extends Controller
             'maps' => DB::table('h1')->where('id_h1', 15)->first()->isi,
             'warna' => DB::table('h1')->where('id_h1', 16)->first()->isi,
             'warna_bg' => DB::table('h1')->where('id_h1', 17)->first()->isi,
+            'url_asset' => ' http://127.0.0.1:2222/assets/img/',
+            'img_tamu' => DB::table('h1')->where('id_h1', 29)->first()->isi,
+            
+            'fontc1' => DB::table('h1')->where('id_h1', 30)->first()->isi,
+            'fontc2' => DB::table('h1')->where('id_h1', 31)->first()->isi,
+            'fontc3' => DB::table('h1')->where('id_h1', 32)->first()->isi,
 
         ];
         return view("home.content", $data);
