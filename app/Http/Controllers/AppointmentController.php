@@ -112,6 +112,7 @@ class AppointmentController extends Controller
 
         $alergi_obat = $r->alergi_obat;
         $tempat = $r->tempat;
+        $keluhan = $r->keluhan;
         $tgl_lahir = $r->tgl_lahir;
         $nohp_ibu = $r->nohp_ibu;
         $nohp_ayah = $r->nohp_ayah;
@@ -153,6 +154,7 @@ class AppointmentController extends Controller
             'jenis_kelamin' => $j_kelamin,
             'golongan_darah' => $gol_darah,
             'alergi_obat' => $alergi_obat,
+            'keluhan' => $keluhan,
             'tgl_lahir' => $tgl_lahir,
             'tempat' => $tempat,
             'alamat' => $alamat,

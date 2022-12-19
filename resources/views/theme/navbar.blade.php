@@ -22,8 +22,8 @@ $img = DB::table('h1')->where('id_h1', 2)->first()->isi;
                 {{-- <a href="#load-service" class="nav-item nav-link">Service</a> --}}
                 {{-- <a href="#load-appointment" class="nav-item nav-link">Appointment</a> --}}
             </div>
+            <a href="http://127.0.0.1:1111/login" class="btn btn-rounded btn-primary" style="margin-left: 10px">Login</a>
         </div>
-        <a href="http://127.0.0.1:1111/login" class="btn btn-rounded btn-primary" style="margin-left: 10px">Login</a>
     </nav>
 </div>
 </div>

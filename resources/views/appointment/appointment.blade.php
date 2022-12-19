@@ -60,9 +60,13 @@
             </div>
 
 
-            <div class="col-12 col-sm-12">
+            <div class="col-6 col-sm-6">
                 <input required id="alergi_obat" name="alergi_obat" type="text"
                     class="form-control bg-light border-0" placeholder="Alergi Obat" style="height: 55px;">
+            </div>
+            <div class="col-6 col-sm-6">
+                <input required id="keluhan" name="keluhan" type="text"
+                    class="form-control bg-light border-0" placeholder="Keluhan" style="height: 55px;">
             </div>
             <div class="col-6 col-sm-6">
                 <div>
