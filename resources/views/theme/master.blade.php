@@ -1,6 +1,6 @@
 @include('theme.head')
 
-<body style="background-color: #{{$warna_bg}}">
+<body style="background-color: {{$warna_bg}}">
     @include('theme.navbar')
 
 
@@ -16,7 +16,7 @@
                     <p class="mb-md-0">&copy; <a class="text-secondary" href="#">Happy Kids</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Website oleh <a class="text-secondary" href="#">Agrika Group.</a></p>
+                    <p class="mb-0">Made by <a class="text-secondary" href="mailto:agrikagroupadm@gmail.com">agrikagroupadm@gmail.com.</a></p>
                 </div>
             </div>
         </div>
@@ -37,18 +37,6 @@
     <script src="{{asset('assets')}}/lib/tempusdominus/js/moment.min.js"></script>
     <script src="{{asset('assets')}}/lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="{{asset('assets')}}/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    {{-- <!-- wajib jquery  -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-    <!-- js untuk bootstrap4  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-    crossorigin="anonymous"></script>
-    <!-- js untuk select2  -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script> --}}
-    <!-- Template Javascript -->
     <script src="{{asset('assets')}}/js/main.js"></script>
 
     

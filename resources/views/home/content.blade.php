@@ -26,7 +26,7 @@
         </h5>
         <h1 class="display-3 text-secondary mb-md-4" style="color: {{$fontc1}};">{{ $teks2 }}</h1>
         <div class="pt-2">
-          <h5
+          {{-- <h5
             class="d-inline-block text-uppercase border-bottom border-5"
             style="
               border-color: rgba(256, 256, 256, 0.3) !important;
@@ -41,7 +41,7 @@
             href="#load-appointment"
             class="btn btn-secondary text-white rounded-pill py-md-3 px-md-5 mx-2"
             >Isi Form</a
-          >
+          > --}}
         </div>
       </div>
     </div>
@@ -129,7 +129,7 @@
 <!-- About End -->
 
 <!-- Appointment Start -->
-<div id="load-appointment" class="container-fluid my-5 py-5" style="background-color: {{$warna}}">
+{{-- <div id="load-appointment" class="container-fluid my-5 py-5" style="background-color: {{$warna}}">
   <div class="container py-5">
     <div class="row gx-5">
       <div class="col-lg-4 mb-5 mb-lg-0">
@@ -154,7 +154,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 <!-- Appointment End -->
 @endsection @section('scripts')
 <script>
